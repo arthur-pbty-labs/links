@@ -1,0 +1,21 @@
+name: Deploy to VM Prod
+
+on:
+  push:
+    branches:
+      - main   # déclenche le déploiement quand tu push sur main
+
+jobs:
+  deploy:
+    runs-on: self-hosted   # ton runner VM code-server
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to production
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            cd ${{ secrets.DEPLOY_PATH }} || exit 1
+            git pull origin main
+            docker compose up -d --build
+          "
