@@ -5,8 +5,8 @@ module.exports = {
   // Informations du profil
   profile: {
     name: 'Arthur',
-    bio: 'Développeur passionné | Créateur de contenu',
-    avatar: '👨‍💻' // Emoji ou chemin vers une image
+    bio: 'Développeur passionné | Sportif de haut niveau',
+    avatar: '/avatar.png' // Chemin relatif vers l'image dans public/
   },
   
   // Liste des liens sociaux
@@ -14,26 +14,44 @@ module.exports = {
     {
       name: 'GitHub',
       url: 'https://github.com/arthur-pbty',
-      icon: '🐙',
+      icon: '/github.png', // Chemin relatif vers l'image dans public/
       description: 'Mon profil GitHub'
     },
     {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/arthur-pbty',
-      icon: '💼',
-      description: 'Mon profil professionnel'
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/arthur_pbty',
-      icon: '🐦',
-      description: 'Mon compte Twitter'
-    },
-    {
       name: 'Instagram',
-      url: 'https://instagram.com/arthur_pbty',
-      icon: '📷',
+      url: 'https://www.instagram.com/arthur.pbty/',
+      icon: '/instagram.png',
       description: 'Mes photos et stories'
+    },
+    {
+      name: 'FFVoile',
+      url: 'https://www.ffvoile.fr/ffv/sportif/cif/cif_detail.aspx?NoLicence=1443697B',
+      icon: '/ffvoile.png',
+      description: 'Mon profil FFVoile'
+    },
+    {
+      name: 'YouTube',
+      url: 'https://www.youtube.com/@arthur-pbty',
+      icon: '/youtube.png',
+      description: 'Ma chaîne YouTube'
+    },
+    {
+      name: 'Discord',
+      url: 'https://discord.gg/MZSseRvCk8',
+      icon: '/discord.png',
+      description: 'Rejoignez mon serveur Discord'
+    },
+    {
+      name: 'TikTok',
+      url: 'https://www.tiktok.com/@arthur.pbty',
+      icon: '/tiktok.png',
+      description: 'Mes vidéos TikTok'
+    },
+    {
+      name: 'Twitch',
+      url: 'https://www.twitch.tv/arthur_pbty',
+      icon: '/twitch.png',
+      description: 'Mes streams en direct'
     }
   ],
   

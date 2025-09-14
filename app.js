@@ -25,7 +25,9 @@ app.get('/', (req, res) => {
 <body>
     <div class="container">
         <div class="profile">
-            <div class="avatar">${profile.avatar}</div>
+            <div class="avatar">
+              <img src="${profile.avatar}" alt="Avatar" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+            </div>
             <h1>${profile.name}</h1>
             <p class="bio">${profile.bio}</p>
         </div>
@@ -33,7 +35,9 @@ app.get('/', (req, res) => {
         <div class="links">
             ${socialLinks.map(link => `
                 <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="link-card">
-                    <span class="icon">${link.icon}</span>
+                    <span class="icon">
+                      <img src="${link.icon}" alt="${link.name}" style="width:30px;height:30px;">
+                    </span>
                     <div class="link-info">
                         <h3>${link.name}</h3>
                         <p>${link.description}</p>
