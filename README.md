@@ -1,89 +1,93 @@
-# Social Links Website
+# Social Links (Next.js)
 
-Une application web Node.js élégante pour afficher et partager vos liens de réseaux sociaux personnels.
-
-![Social Links Website](https://github.com/user-attachments/assets/61f94cae-166c-4dc0-ad17-2412e184d4ad)
+Une page de liens personnelle moderne construite avec Next.js (App Router).
 
 ## Fonctionnalités
 
-- 🎨 Interface moderne et responsive
-- 🔗 Affichage des liens vers vos réseaux sociaux
-- 📱 Compatible mobile et desktop
-- 🚀 Serveur Express.js léger
-- 🌟 Design avec gradient et animations
-- 📊 API REST pour récupérer les liens (extensibilité future)
+- 🎨 UI moderne et responsive
+- 🔎 Recherche instantanée dans les liens
+- 🏷️ Filtres par catégories
+- 🌗 Mode clair/sombre (persisté en local)
+- 🔐 Espace admin protégé (analytics privées)
+- ➕ Ajout et suppression de liens depuis le menu admin
 
 ## Installation
 
-1. Clonez le repository :
-```bash
-git clone https://github.com/arthur-pbty/links.git
-cd links
-```
-
-2. Installez les dépendances :
 ```bash
 npm install
 ```
 
-3. Personnalisez vos liens sociaux dans `app.js` (voir section Configuration)
+## Démarrage
 
-4. Démarrez l'application :
 ```bash
-npm start
+npm run dev
 ```
 
-5. Ouvrez votre navigateur sur `http://localhost:3000`
+Puis ouvre http://localhost:3000
 
-## Configuration
+## Scripts
 
-Pour personnaliser vos liens sociaux, modifiez le tableau `socialLinks` dans le fichier `app.js` :
+- `npm run dev` : développement
+- `npm run build` : build de production
+- `npm start` : démarrage en production
 
-```javascript
-const socialLinks = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/votre-username',
-    icon: '🐙',
-    description: 'Mon profil GitHub'
-  },
-  // Ajoutez vos autres liens ici...
-];
+## Variables critiques (.env)
+
+Copie `.env.example` vers `.env` et ajuste les valeurs :
+
+```bash
+cp .env.example .env
 ```
 
-### Structure d'un lien
+Variables requises :
 
-- `name` : Nom du réseau social
-- `url` : URL vers votre profil
-- `icon` : Emoji ou icône à afficher
-- `description` : Description courte du lien
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `ADMIN_SESSION_SECRET`
+- `PORT`
 
-## Scripts disponibles
+## Configuration des données
 
-- `npm start` : Démarre le serveur en mode production
-- `npm run dev` : Démarre le serveur en mode développement
+Modifie le fichier `config.js` :
 
-## API
+- `profile` : nom, bio, avatar
+- `socialLinks` : liste de liens affichés
 
-L'application expose également une API REST :
+Chaque lien peut contenir :
 
-- `GET /` : Page principale avec l'interface web
-- `GET /api/links` : Récupère la liste des liens en JSON
+- `name`
+- `url`
+- `icon` (fichier dans `public/`)
+- `description`
+- `category`
 
-## Technologies utilisées
+## Admin
 
-- Node.js
-- Express.js
-- HTML5/CSS3
-- Design responsive
+- URL admin : http://localhost:3000/admin
+- Identifiant : admin
+- Mot de passe : 123456
 
-## Déploiement
+Dans le menu admin, vous pouvez :
 
-Pour déployer sur des plateformes comme Heroku, Vercel, ou Railway :
+- consulter les analytics (clics par lien)
+- ajouter un lien
+- supprimer un lien
 
-1. Assurez-vous que la variable d'environnement `PORT` est configurée
-2. Le serveur écoutera automatiquement sur `process.env.PORT || 3000`
+## Docker Compose
+
+Le `docker-compose.yml` lance maintenant :
+
+1. `npm install`
+2. `npm run build`
+3. `npm start`
+
+Test prod Docker :
+
+```bash
+docker compose up --build -d
+docker compose ps
+```
 
 ## Licence
 
-MIT - Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+MIT - Voir [LICENSE](LICENSE)

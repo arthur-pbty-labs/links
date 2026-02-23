@@ -1,16 +1,19 @@
 {
   "name": "links",
   "version": "1.0.0",
-  "description": "A web app to distribute personal social media links",
-  "main": "app.js",
+  "description": "Une page de liens moderne avec Next.js",
+  "main": "next.config.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "node app.js"
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start"
   },
   "keywords": ["links", "social", "profile"],
   "author": "arthur-pbty",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

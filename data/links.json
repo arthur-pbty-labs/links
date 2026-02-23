@@ -1,0 +1,58 @@
+[
+  {
+    "id": "github-1",
+    "name": "GitHub",
+    "url": "https://github.com/arthur-pbty",
+    "icon": "/github.png",
+    "description": "Mon profil GitHub",
+    "category": "Développement"
+  },
+  {
+    "id": "instagram-2",
+    "name": "Instagram",
+    "url": "https://www.instagram.com/arthur.pbty/",
+    "icon": "/instagram.png",
+    "description": "Mes photos et stories",
+    "category": "Réseaux"
+  },
+  {
+    "id": "ffvoile-3",
+    "name": "FFVoile",
+    "url": "https://www.ffvoile.fr/ffv/sportif/cif/cif_detail.aspx?NoLicence=1443697B",
+    "icon": "/ffvoile.png",
+    "description": "Mon profil FFVoile",
+    "category": "Sport"
+  },
+  {
+    "id": "youtube-4",
+    "name": "YouTube",
+    "url": "https://www.youtube.com/@arthur-pbty",
+    "icon": "/youtube.png",
+    "description": "Ma chaîne YouTube",
+    "category": "Création"
+  },
+  {
+    "id": "discord-5",
+    "name": "Discord",
+    "url": "https://discord.gg/MZSseRvCk8",
+    "icon": "/discord.png",
+    "description": "Rejoignez mon serveur Discord",
+    "category": "Communauté"
+  },
+  {
+    "id": "tiktok-6",
+    "name": "TikTok",
+    "url": "https://www.tiktok.com/@arthur.pbty",
+    "icon": "/tiktok.png",
+    "description": "Mes vidéos TikTok",
+    "category": "Création"
+  },
+  {
+    "id": "twitch-7",
+    "name": "Twitch",
+    "url": "https://www.twitch.tv/arthur_pbty",
+    "icon": "/twitch.png",
+    "description": "Mes streams en direct",
+    "category": "Streaming"
+  }
+]
