@@ -76,6 +76,7 @@ web_modules/
 
 # Next.js build output
 .next
+.next_perm_backup_*/
 out
 
 # Nuxt.js build / generate output
@@ -124,6 +125,9 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Local VS Code workspace settings and deployment helpers
+.vscode/
 
 # yarn v3
 .pnp.*

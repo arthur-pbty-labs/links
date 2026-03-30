@@ -1,93 +1,85 @@
-# Social Links (Next.js)
+# Links - Personal Link Hub
 
-Une page de liens personnelle moderne construite avec Next.js (App Router).
+Page de liens personnelle construite avec Next.js (App Router), avec une interface publique et un espace admin pour gerer les liens et consulter les analytics.
 
-## Fonctionnalités
+Lien du projet en ligne: https://links.arthurp.fr
 
-- 🎨 UI moderne et responsive
-- 🔎 Recherche instantanée dans les liens
-- 🏷️ Filtres par catégories
-- 🌗 Mode clair/sombre (persisté en local)
-- 🔐 Espace admin protégé (analytics privées)
-- ➕ Ajout et suppression de liens depuis le menu admin
+## Points cles
 
-## Installation
+- Interface publique rapide et responsive
+- Recherche et filtrage par categorie
+- Espace admin protege par session
+- Suivi des clics par lien
+- Gestion des liens depuis l'admin (ajout/suppression)
+
+## Stack
+
+- Next.js 16
+- React 19
+- Stockage JSON local (`data/links.json`, `data/analytics.json`)
+
+## Lancer en local
 
 ```bash
 npm install
-```
-
-## Démarrage
-
-```bash
+cp .env.example .env
 npm run dev
 ```
 
-Puis ouvre http://localhost:3000
+Application: http://localhost:3000
+Admin: http://localhost:3000/admin
 
-## Scripts
+## Variables d'environnement
 
-- `npm run dev` : développement
-- `npm run build` : build de production
-- `npm start` : démarrage en production
-
-## Variables critiques (.env)
-
-Copie `.env.example` vers `.env` et ajuste les valeurs :
-
-```bash
-cp .env.example .env
-```
-
-Variables requises :
+Variables requises dans `.env`:
 
 - `ADMIN_USERNAME`
 - `ADMIN_PASSWORD`
 - `ADMIN_SESSION_SECRET`
 - `PORT`
 
-## Configuration des données
+Bonnes pratiques:
 
-Modifie le fichier `config.js` :
+- Utiliser un mot de passe admin fort
+- Generer un secret de session long et aleatoire
+- Ne jamais versionner le fichier `.env`
 
-- `profile` : nom, bio, avatar
-- `socialLinks` : liste de liens affichés
+## Configuration du contenu
 
-Chaque lien peut contenir :
+Le profil et les liens affiches sont definis dans `config.js`.
+
+Pour chaque lien, renseigner:
 
 - `name`
 - `url`
-- `icon` (fichier dans `public/`)
+- `icon`
 - `description`
 - `category`
 
-## Admin
+## Deployment
 
-- URL admin : http://localhost:3000/admin
-- Identifiant : admin
-- Mot de passe : 123456
+### Build local de verification
 
-Dans le menu admin, vous pouvez :
+```bash
+npm run build
+npm start
+```
 
-- consulter les analytics (clics par lien)
-- ajouter un lien
-- supprimer un lien
-
-## Docker Compose
-
-Le `docker-compose.yml` lance maintenant :
-
-1. `npm install`
-2. `npm run build`
-3. `npm start`
-
-Test prod Docker :
+### Docker
 
 ```bash
 docker compose up --build -d
 docker compose ps
 ```
 
+## SEO / Backlink
+
+Le projet public est accessible ici:
+
+- https://links.arthurp.fr
+
+Tu peux reutiliser cette URL dans tes profils, portfolios et articles pour renforcer le maillage vers ton site principal.
+
 ## Licence
 
-MIT - Voir [LICENSE](LICENSE)
+MIT - voir [LICENSE](LICENSE)
